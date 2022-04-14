@@ -1,0 +1,91 @@
+﻿@{
+    ViewBag.Title = "CategoryMaster";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/bower_components/datatable/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="row">
+            <div class="col col-md-8">
+                <h1 style="font-size: 24px;margin: 0px;"><i class="fa fa-fw fa-th-large"></i>&nbsp;Category Master</h1>
+            </div>
+            <div class="col col-md-4" style="text-align:right;">
+                <a href="javascript:void(0)" data-toggle="modal" data-target="#modal_CategoryMaster" class="btn btn-primary"><i class="fa fa-fw fa-plus-circle"></i>&nbsp;Add Category</a>
+            </div>
+        </div>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <!-- Info boxes -->
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <table id="CategoryMasterDT" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>S. No.</th>
+                                    <th>Category Name</th>
+                                    <th>Status</th>
+                                    <th>Creation Date</th>
+                                    <th>Modifiy Date</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var DL in Model)
+                                {
+                                    <tr>
+                                        <td>@DL.catID</td>
+                                        <td>@DL.CatName</td>
+                                        @if (DL.IsActive == true)
+                                        {
+                                            <td style="color:green;">Active</td>
+                                        }
+                                        else
+                                        {
+                                            <td style="color:red;">Inactive</td>
+                                        }
+                                        <td>@DL.CreationDate</td>
+                                        <td>@DL.ModifiyDate</td>
+                                        <th><a href="@Url.Action("FillSBSEmployeeDetil", "Employee", new RouteValueDictionary(new { id = DL.catID }))"><i class="fa fa-fw fa-edit"></i>&nbsp;Edit</a></th>
+                                        <th><a href="@Url.Action("DeleteProductCategory", "CategoryMaster", new RouteValueDictionary(new { id = DL.catID }))" onclick="return confirm('Are you sure you want to delete this record?')"><i class="fa fa-fw fa-trash"></i>&nbsp;Delete</a></th>
+                                    </tr>
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>S. No.</th>
+                                    <th>Category Name</th>
+                                    <th>Status</th>
+                                    <th>Creation Date</th>
+                                    <th>Modifiy Date</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+            </div>
+        </div>
+    </section>
+    @Html.Partial("_CategoryMaster", new AdminPanel.Models.CategoryMaster())
+</div>
+<script src="~/bower_components/datatable/js/jquery.dataTables.min.js"></script>
+<script src="~/bower_components/datatable/js/dataTables.bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $('#CategoryMasterDT').DataTable({
+        });
+    });
+</script>
+
+

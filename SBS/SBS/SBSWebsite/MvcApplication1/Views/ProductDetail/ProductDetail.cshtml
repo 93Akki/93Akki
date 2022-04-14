@@ -1,0 +1,185 @@
+﻿@{
+    ViewBag.Title = "ProductDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using System.Data
+@{
+    DataSet PD = ViewData["ProductDetail"] as DataSet;
+
+}
+<link href="~/Content/css/jquery.jqZoom.css" rel="stylesheet" />
+<script src="~/Content/js/jquery.jqZoom.js"></script>
+@foreach (DataRow dr in PD.Tables[0].Rows)
+{
+    <input type="hidden" id="PID" value="@dr["PID"]" />
+    <section class="py-3 bg-light">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")">Home</a></li>
+                <li class="breadcrumb-item"><a href="@Url.Action("Index", "Products", new { id = dr["catID"] })">@dr["CatName"]</a></li>
+                <li class="breadcrumb-item"><a href="@Url.Action("Index", "ProductDetail", new { id = dr["PID"] })">@dr["PName"]</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Items</li>
+            </ol>
+        </div>
+    </section>
+    <!-- ========================= SECTION CONTENT ========================= -->
+    <section class="section-content bg-white padding-y">
+        <div class="container">
+            <!-- ============================ ITEM DETAIL ======================== -->
+            <div class="row">
+                <aside class="col-md-6">
+                    <div class="card">
+                        <article class="gallery-wrap">
+                            <div class="img-big-wrap">
+                                <div class="example">
+                                    <div class="zoom-box">
+                                        <a href="javascript:void(0)">
+                                            <img id="PImg" src="@dr["imgPath"]" class="maglarge">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div> <!-- slider-product.// -->
+                            <div class="thumbs-wrap">
+                                @foreach (DataRow dr1 in PD.Tables[1].Rows)
+                                {
+                                    <a href="javascript:void(0)" class="item-thumb"> <img src="@dr1["SubimgPath"]"></a>
+                                }
+                            </div> <!-- slider-nav.// -->
+                        </article> <!-- gallery-wrap .end// -->
+                    </div> <!-- card.// -->
+                </aside>
+                <main class="col-md-6">
+                    <article class="product-info-aside">
+                        <h2 class="title mt-3">@dr["PName"],&nbsp;@dr["Qty"].ToString().Replace(".00", "") @dr["QtyType"]</h2>
+                        <div class="mb-3">
+
+                        </div> <!-- price-detail-wrap .// -->
+                        <p>
+                            @dr["ProductDescription"]
+                        </p>
+
+                        <dl class="row">
+                            <dt class="col-sm-2" style="color:#969696;">SBS Rate :</dt>
+                            <dd class="col-sm-9" style="color: #B12704; font-weight: 600;"><i class="fas fa-rupee-sign"></i>&nbsp;@dr["sbsRate"]</dd>
+
+                            @if (dr["marketRate"].ToString() != "0.00")
+                            {
+                                <dt class="col-sm-2" style="color:#969696;">M.R.P. :</dt>
+                                <dd class="col-sm-9"><del><i class="fas fa-rupee-sign"></i>&nbsp;@dr["marketRate"]</del></dd>
+                            }
+
+                            @if (Convert.ToDecimal(dr["YouSave"]) > 0)
+                            {
+                                <dt class="col-sm-2" style="color:#969696;">You Save :</dt>
+                                <dd class="col-sm-9" style="font-weight: 600;"><i class="fas fa-rupee-sign"></i>&nbsp;@dr["YouSave"]</dd>
+                            }
+
+                            <dt class="col-sm-2" style="color:#969696;">Availabilty :</dt>
+                            <dd class="col-sm-9" style="color:#009c14; font-weight: 600;">In Stock</dd>
+                            @*<dt class="col-sm-5">
+                                    <input type="text" placeholder="Enter SBS referral code here" class="form-control" name="">
+                                </dt>
+                                <dd class="col-sm-7">
+                                    <button class="btn ml-2 btn-warning"> Apply Code</button>
+                                </dd>*@
+                        </dl>
+                        <div class="form-row  mt-4">
+                            <div class="form-group col-md flex-grow-0">
+                                <div class="input-group mb-3 input-spinner">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-light" type="button" id="button-plus"> + </button>
+                                    </div>
+                                    <input type="text" class="form-control" value="1">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-light" type="button" id="button-minus"> &minus; </button>
+                                    </div>
+                                </div>
+                            </div> <!-- col.// -->
+                            <div class="form-group col-md">
+                                @if (dr["IsAddToCart"].ToString() == "True")
+                                {
+                                    <a href="javascript:void(0);" id="addToCart" class="btn  btn-primary">
+                                        <i class="fas fa-shopping-cart"></i> <span class="text">Add to cart</span>
+                                    </a>
+                                }
+                                <a href="#" class="btn btn-light">
+                                    <i class="fa fa-user"></i> <span class="text">Contact SBS Mitra</span>
+                                </a>
+                            </div> <!-- col.// -->
+                        </div> <!-- row.// -->
+                    </article> <!-- product-info-aside .// -->
+                </main> <!-- col.// -->
+
+            </div> <!-- row.// -->
+            <!-- ================ ITEM DETAIL END .// ================= -->
+
+        </div> <!-- container .//  -->
+    </section>
+    <!-- ========================= SECTION CONTENT END// ========================= -->
+}
+
+<script>
+    $(function () {
+        $(".thumbs-wrap a").on("click", function () {
+            $(".img-big-wrap img").attr("src", $(this).find("Img").attr("src"));
+        });
+    });
+</script>
+
+<script>
+    $(function () {
+        $("#PImg").jqZoom({
+            selectorWidth: 50,
+            selectorHeight: 50,
+            viewerWidth: 600,
+            viewerHeight: 400
+        });
+    });
+</script>
+
+<script>
+    $(function () {
+        $("#button-plus").on("click", function () {
+            var currVal = parseInt($(".input-spinner input").val());
+            currVal = (currVal + 1);
+            $(".input-spinner input").val(currVal);
+        });
+    });
+</script>
+
+<script>
+    $(function () {
+        $("#button-minus").on("click", function () {
+            var currVal = parseInt($(".input-spinner input").val());
+            if (currVal != 1)
+                currVal = (currVal - 1);
+            $(".input-spinner input").val(currVal);
+        });
+    });
+</script>
+
+<script>
+    $(function () {
+        $("#addToCart").on("click", function () {
+            var arrAddToCart = {};
+            arrAddToCart.studentName = $("#PID").val();
+            arrAddToCart.quantity = $(".input-spinner input").val();
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("AddToCartItems", "ProductDetail")',
+                data: '{PID: ' + $("#PID").val() + ',quantity:' + $(".input-spinner input").val() + '}',
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (res) {
+                    if (res.Message == 'Login First') {
+                        window.location.href = '/Login/Index/';
+                    }
+                },
+                error: function (res) {
+                    alert("Error while inserting data");
+                }
+            });
+        });
+    });
+</script>
+

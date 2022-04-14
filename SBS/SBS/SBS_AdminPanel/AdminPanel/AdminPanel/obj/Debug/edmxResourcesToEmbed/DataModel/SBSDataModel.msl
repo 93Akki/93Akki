@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="sbsjodhpurModelStoreContainer" CdmEntityContainer="sbsjodhpurEntities">
+    <EntitySetMapping Name="CityMasters">
+      <EntityTypeMapping TypeName="sbsjodhpurModel.CityMaster">
+        <MappingFragment StoreEntitySet="CityMaster">
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ModifiyDate" ColumnName="ModifiyDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CountryMasters">
+      <EntityTypeMapping TypeName="sbsjodhpurModel.CountryMaster">
+        <MappingFragment StoreEntitySet="CountryMaster">
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ModifiyDate" ColumnName="ModifiyDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SBS_Employee_EducationCertificates">
+      <EntityTypeMapping TypeName="sbsjodhpurModel.SBS_Employee_EducationCertificates">
+        <MappingFragment StoreEntitySet="SBS_Employee_EducationCertificates">
+          <ScalarProperty Name="DocID" ColumnName="DocID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="EducationCertificates" ColumnName="EducationCertificates" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ModifiyDate" ColumnName="ModifiyDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SBS_Employee_IDProofs">
+      <EntityTypeMapping TypeName="sbsjodhpurModel.SBS_Employee_IDProofs">
+        <MappingFragment StoreEntitySet="SBS_Employee_IDProofs">
+          <ScalarProperty Name="DocID" ColumnName="DocID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="IDProofs" ColumnName="IDProofs" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ModifiyDate" ColumnName="ModifiyDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SBS_EmployeeMaster">
+      <EntityTypeMapping TypeName="sbsjodhpurModel.SBS_EmployeeMaster">
+        <MappingFragment StoreEntitySet="SBS_EmployeeMaster">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ModifiyDate" ColumnName="ModifiyDate" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="PossportPhoto" ColumnName="PossportPhoto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StateMasters">
+      <EntityTypeMapping TypeName="sbsjodhpurModel.StateMaster">
+        <MappingFragment StoreEntitySet="StateMaster">
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ModifiyDate" ColumnName="ModifiyDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SBS_CategoryMaster">
+      <EntityTypeMapping TypeName="sbsjodhpurModel.SBS_CategoryMaster">
+        <MappingFragment StoreEntitySet="SBS_CategoryMaster">
+          <ScalarProperty Name="catID" ColumnName="catID" />
+          <ScalarProperty Name="CatName" ColumnName="CatName" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ModifiyDate" ColumnName="ModifiyDate" />
+          <ScalarProperty Name="CatSection" ColumnName="CatSection" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SBS_Login">
+      <EntityTypeMapping TypeName="sbsjodhpurModel.SBS_Login">
+        <MappingFragment StoreEntitySet="SBS_Login">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SBS_MemberKYCDetails">
+      <EntityTypeMapping TypeName="sbsjodhpurModel.SBS_MemberKYCDetails">
+        <MappingFragment StoreEntitySet="SBS_MemberKYCDetails">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="KYC_AadharCard" ColumnName="KYC_AadharCard" />
+          <ScalarProperty Name="KYC_PanCard" ColumnName="KYC_PanCard" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ModifiyDate" ColumnName="ModifiyDate" />
+          <ScalarProperty Name="Verified" ColumnName="Verified" />
+          <ScalarProperty Name="VerifiedBy" ColumnName="VerifiedBy" />
+          <ScalarProperty Name="PassportPhoto" ColumnName="PassportPhoto" />
+          <ScalarProperty Name="KYC_AadharCard_back" ColumnName="KYC_AadharCard_back" />
+          <ScalarProperty Name="KYC_PanCard_back" ColumnName="KYC_PanCard_back" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SBS_ProductDetail">
+      <EntityTypeMapping TypeName="sbsjodhpurModel.SBS_ProductDetail">
+        <MappingFragment StoreEntitySet="SBS_ProductDetail">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="SubimgPath" ColumnName="SubimgPath" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="MoifiyDate" ColumnName="MoifiyDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SBS_ProductMaster">
+      <EntityTypeMapping TypeName="sbsjodhpurModel.SBS_ProductMaster">
+        <MappingFragment StoreEntitySet="SBS_ProductMaster">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="PName" ColumnName="PName" />
+          <ScalarProperty Name="marketRate" ColumnName="marketRate" />
+          <ScalarProperty Name="sbsRate" ColumnName="sbsRate" />
+          <ScalarProperty Name="imgPath" ColumnName="imgPath" />
+          <ScalarProperty Name="catID" ColumnName="catID" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsAddToCart" ColumnName="IsAddToCart" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ModifiyDate" ColumnName="ModifiyDate" />
+          <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
+          <ScalarProperty Name="DocPath" ColumnName="DocPath" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="QtyType" ColumnName="QtyType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SBS_RegistrationMaster">
+      <EntityTypeMapping TypeName="sbsjodhpurModel.SBS_RegistrationMaster">
+        <MappingFragment StoreEntitySet="SBS_RegistrationMaster">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="SBSMemberID" ColumnName="SBSMemberID" />
+          <ScalarProperty Name="SBSPassword" ColumnName="SBSPassword" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ModifiyDate" ColumnName="ModifiyDate" />
+          <ScalarProperty Name="referralCode" ColumnName="referralCode" />
+          <ScalarProperty Name="referralCount" ColumnName="referralCount" />
+          <ScalarProperty Name="referralBY" ColumnName="referralBY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SBS_GetDashboardData" FunctionName="sbsjodhpurModel.Store.SBS_GetDashboardData" />
+    <FunctionImportMapping FunctionImportName="SBS_GetEmployeeDetails" FunctionName="sbsjodhpurModel.Store.SBS_GetEmployeeDetails" />
+    <FunctionImportMapping FunctionImportName="SBS_GetMemberDetails" FunctionName="sbsjodhpurModel.Store.SBS_GetMemberDetails" />
+    <FunctionImportMapping FunctionImportName="SBS_GetMemberKYCDetail" FunctionName="sbsjodhpurModel.Store.SBS_GetMemberKYCDetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="sbsjodhpurModel.SBS_GetMemberKYCDetail_Result">
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="SBSMemberID" ColumnName="SBSMemberID" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SBS_GetMemberReferralDetails" FunctionName="sbsjodhpurModel.Store.SBS_GetMemberReferralDetails" />
+    <FunctionImportMapping FunctionImportName="SBS_GetProductCategory" FunctionName="sbsjodhpurModel.Store.SBS_GetProductCategory" />
+    <FunctionImportMapping FunctionImportName="SBS_GetProductDetails" FunctionName="sbsjodhpurModel.Store.SBS_GetProductDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="sbsjodhpurModel.SBS_GetProductDetails_Result">
+          <ScalarProperty Name="sNo" ColumnName="sNo" />
+          <ScalarProperty Name="catID" ColumnName="catID" />
+          <ScalarProperty Name="catName" ColumnName="catName" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="PName" ColumnName="PName" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsAddToCart" ColumnName="IsAddToCart" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ModifiyDate" ColumnName="ModifiyDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SBS_GetProducts" FunctionName="sbsjodhpurModel.Store.SBS_GetProducts" />
+    <FunctionImportMapping FunctionImportName="SBS_GetProductsDetails" FunctionName="sbsjodhpurModel.Store.SBS_GetProductsDetails" />
+    <FunctionImportMapping FunctionImportName="SBS_saveMemberKYCDetails" FunctionName="sbsjodhpurModel.Store.SBS_saveMemberKYCDetails" />
+    <FunctionImportMapping FunctionImportName="SBS_Verifiy_KYC_Documents" FunctionName="sbsjodhpurModel.Store.SBS_Verifiy_KYC_Documents">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="sbsjodhpurModel.SBS_Verifiy_KYC_Documents_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="SBSMemberID" ColumnName="SBSMemberID" />
+          <ScalarProperty Name="SBSPassword" ColumnName="SBSPassword" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ModifiyDate" ColumnName="ModifiyDate" />
+          <ScalarProperty Name="referralCode" ColumnName="referralCode" />
+          <ScalarProperty Name="referralCount" ColumnName="referralCount" />
+          <ScalarProperty Name="referralBY" ColumnName="referralBY" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_MemberRegistration" FunctionName="sbsjodhpurModel.Store.sp_MemberRegistration" />
+    <FunctionImportMapping FunctionImportName="usp_RandomPassword" FunctionName="sbsjodhpurModel.Store.usp_RandomPassword" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,96 @@
+﻿@{
+    ViewBag.Title = "SBSMembers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/bower_components/datatable/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            <i class="fa fa-users"></i>&nbsp;SBS Members
+        </h1>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <!-- Info boxes -->
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <table id="SBSMemberDT" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>S. No.</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Mobile</th>
+                                    <th>Email</th>
+                                    <th>Gender</th>
+                                    <th>City</th>
+                                    <th>Member ID</th>
+                                    <th>Password</th>
+                                    <th>Status</th>
+                                    <th>KYC Status</th>
+                                    <th>Creation Date</th>
+                                    <th>Modifiy Date</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var DL in Model)
+                                {
+                                    <tr>
+                                        <td>@DL.sNo</td>
+                                        <td>@DL.FirstName</td>
+                                        <td>@DL.LastName</td>
+                                        <td>@DL.Mobile</td>
+                                        <td>@DL.Email</td>
+                                        <td>@DL.Gender</td>
+                                        <td>@DL.City</td>
+                                        <td>@DL.SBSMemberID</td>
+                                        <td>@DL.SBSPassword</td>
+                                        <td style="color:green;">@DL.IsActive</td>
+                                        <td style="color:green;">KYC Done</td>
+                                        <td>@DL.CreationDate</td>
+                                        <td>@DL.ModifiyDate</td>
+                                        <th><a href="@Url.Action("MembersDetail", "Members", new RouteValueDictionary(new { id = @DL.SBSMemberID }))"><i class="fa fa-fw fa-eye"></i>&nbsp;View</a></th>
+                                    </tr>
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>S. No.</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Mobile</th>
+                                    <th>Email</th>
+                                    <th>Gender</th>
+                                    <th>City</th>
+                                    <th>Member ID</th>
+                                    <th>Password</th>
+                                    <th>Status</th>
+                                    <th>Creation Date</th>
+                                    <th>Modifiy Date</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="~/bower_components/datatable/js/jquery.dataTables.min.js"></script>
+<script src="~/bower_components/datatable/js/dataTables.bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $('#SBSMemberDT').DataTable({
+            "scrollX": true
+        });
+    });
+</script>

@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "Registration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/js/Common.js"></script>
+<script src="~/Scripts/js/Registration.js"></script>
+<!-- ========================= SECTION CONTENT ========================= -->
+<section class="section-content padding-y">
+    <!-- ============================ COMPONENT REGISTER   ================================= -->
+    <div class="card mx-auto" style="max-width:520px; margin-top:40px;">
+        <article class="card-body">
+            <header class="mb-4"><h4 class="card-title">Become a SBS Member</h4></header>
+            <form>
+                <div class="form-row">
+                    <div class="col form-group">
+                        <label>First name <b style="color:red;">*</b></label>
+                        <input id="txtfirstName" type="text" class="form-control" placeholder="" required>
+                    </div> <!-- form-group end.// -->
+                    <div class="col form-group">
+                        <label>Last name <b style="color:red;">*</b></label>
+                        <input id="txtlastName" type="text" class="form-control" placeholder="" required>
+                    </div> <!-- form-group end.// -->
+                </div> <!-- form-row end.// -->
+                <div class="form-group">
+                    <label>Mobile Number <b style="color:red;">*</b></label>
+                    <input id="txtMobileNumber" type="text" class="form-control" placeholder="" maxlength="10" required>
+                    <small class="form-text text-muted">We'll never share your mobile number with anyone else.</small>
+                </div> <!-- form-group end.// -->
+                <div class="form-group">
+                    <label>Email <b style="color:red;">*</b></label>
+                    <input type="email" id="txtEmail" class="form-control" placeholder="" required>
+                    <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div> <!-- form-group end.// -->
+                <div class="form-group">
+                    <label class="custom-control custom-radio custom-control-inline">
+                        <input class="custom-control-input" checked="" type="radio" name="gender" value="0">
+                        <span class="custom-control-label"> Male </span>
+                    </label>
+                    <label class="custom-control custom-radio custom-control-inline">
+                        <input class="custom-control-input" type="radio" name="gender" value="1">
+                        <span class="custom-control-label"> Female </span>
+                    </label>
+                </div> <!-- form-group end.// -->
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>City <b style="color:red;">*</b></label>
+                        <input id="txtCity" type="text" class="form-control" required>
+                    </div> <!-- form-group end.// -->
+                    <div class="form-group col-md-6">
+                        <label>Country <b style="color:red;">*</b></label>
+                        <select id="drpCountry" class="form-control">
+                            <option value="India">India</option>
+                        </select>
+                    </div> <!-- form-group end.// -->
+                </div> <!-- form-row.// -->
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label>SBS Referral Code</label>
+                        <input id="txtreferralcode" type="text" class="form-control">
+                        <small class="form-text text-muted">Do you have any SBS referral code?</small>
+                    </div> <!-- form-group end.// -->
+                </div> <!-- form-row.// -->
+                <div id="alertMsg"></div>
+                <div class="form-group">
+                    <label class="custom-control custom-checkbox"> <input type="checkbox" class="custom-control-input" id="TandC"><div class="custom-control-label"> I am agree with <a href="@Url.Action("Index", "TermsConditions")" target="_blank" style="color: #ff6a00;">terms and contitions</a>  </div> </label>
+                </div> <!-- form-group end.// -->
+                <div class="form-group">
+                    <a href="javascript:void(0);" onclick="javascript: SBSRegister(); return false;" class="btn btn-primary btn-block">Register</a>
+                </div> <!-- form-group// -->
+
+            </form>
+        </article><!-- card-body.// -->
+    </div> <!-- card .// -->
+    <p class="text-center mt-4">Have an account? <a href="@Url.Action("Index","Login")">Log In</a></p>
+    <br><br>
+    <!-- ============================ COMPONENT REGISTER  END.// ================================= -->
+
+</section>
+<!-- ========================= SECTION CONTENT END// ========================= -->

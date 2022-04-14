@@ -1,0 +1,712 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\Extra\SBS\SBS\SBS_AdminPanel_Publish</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/AdminPanel.dll">
+      <publishTime>06/24/2021 00:40:46</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>12/03/2020 12:44:15</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>12/03/2020 12:44:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>12/03/2020 12:44:11</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Mvc.FixedDisplayModes.dll">
+      <publishTime>12/03/2020 12:44:12</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>12/03/2020 12:44:12</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>12/03/2020 12:44:13</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>12/03/2020 12:44:13</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>12/03/2020 12:44:13</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>12/03/2020 12:44:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>12/03/2020 12:44:14</publishTime>
+    </File>
+    <File Include="bin/System.Web.Providers.dll">
+      <publishTime>12/03/2020 12:44:14</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>12/03/2020 12:44:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>12/03/2020 12:44:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>12/03/2020 12:44:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>12/03/2020 12:44:12</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>12/03/2020 12:44:15</publishTime>
+    </File>
+    <File Include="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/bootstrap/dist/css/bootstrap.min.css">
+      <publishTime>01/16/2021 14:55:08</publishTime>
+    </File>
+    <File Include="bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/bootstrap/dist/fonts/glyphicons-halflings-regulard41d.eot">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/bootstrap/dist/js/bootstrap.min.js">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/datatable/css/dataTables.bootstrap.min.css">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/datatable/js/dataTables.bootstrap.min.js">
+      <publishTime>01/22/2021 17:17:04</publishTime>
+    </File>
+    <File Include="bower_components/datatable/js/jquery.dataTables.min.js">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/fastclick/lib/fastclick.js">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/font-awesome/css/font-awesome.min.css">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/font-awesome/fonts/fontawesome-webfont3e6e.eot">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/font-awesome/fonts/fontawesome-webfont3e6e.svg">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/font-awesome/fonts/fontawesome-webfont3e6e.ttf">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/font-awesome/fonts/fontawesome-webfont3e6e.woff">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/font-awesome/fonts/fontawesome-webfont3e6e.woff2">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/font-awesome/fonts/fontawesome-webfontd41d.eot">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/Ionicons/css/ionicons.min.css">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/Ionicons/fonts/ionicons28b5.eot">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/Ionicons/fonts/ionicons28b5.svg">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/Ionicons/fonts/ionicons28b5.ttf">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/Ionicons/fonts/ionicons28b5.woff">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/jquery-slimscroll/jquery.slimscroll.min.js">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/all.css">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/flat/aero%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/flat/aero.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/flat/blue%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/flat/blue.css">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/flat/blue.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/flat/flat%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/flat/flat.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/flat/green%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/flat/green.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/flat/grey%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/flat/grey.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/flat/orange%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/flat/orange.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/flat/pink%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/flat/pink.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/flat/purple%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/flat/purple.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/flat/red%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/flat/red.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/flat/yellow%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/flat/yellow.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/flat/_all.css">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/futurico/futurico%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/futurico/futurico.css">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/futurico/futurico.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/icheck.min.js">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/line/line%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/line/line.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/line/_all.css">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/minimal/aero%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/minimal/aero.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/minimal/blue%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/minimal/blue.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/minimal/green%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/minimal/green.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/minimal/grey%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/minimal/grey.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/minimal/orange%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/minimal/orange.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/minimal/pink%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/minimal/pink.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/minimal/purple%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/minimal/purple.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/minimal/red%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/minimal/red.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/minimal/yellow%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/minimal/yellow.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/minimal/_all.css">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/polaris/polaris%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/polaris/polaris.css">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/polaris/polaris.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/square/aero%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/square/aero.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/square/blue%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/square/blue.css">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/square/blue.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/square/green%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/square/green.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/square/grey%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/square/grey.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/square/orange%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/square/orange.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/square/pink%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/square/pink.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/square/purple%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/square/purple.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/square/red%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/square/red.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/square/square%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/square/square.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/square/yellow%402x.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/square/yellow.png">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/iCheck/square/_all.css">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/input-mask/jquery.inputmask.date.extensions.js">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/input-mask/jquery.inputmask.extensions.js">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/input-mask/jquery.inputmask.js">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/jvectormap/jquery-jvectormap-world-mill-en.js">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/pace/pace.min.css">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/seiyria-bootstrap-slider/bootstrap-slider.min.js">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/seiyria-bootstrap-slider/css/bootstrap-slider.min.css">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/timepicker/bootstrap-timepicker.min.css">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="bower_components/plugins/timepicker/bootstrap-timepicker.min.js">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="Content/after-c9785b6431227bafcf723d1b0cff2c32.jpg">
+      <publishTime>01/26/2021 20:45:16</publishTime>
+    </File>
+    <File Include="Content/css/AdminLTE.min.css">
+      <publishTime>06/22/2021 19:00:39</publishTime>
+    </File>
+    <File Include="Content/css/skins/_all-skins.min.css">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="Content/pancard-500x500-500x500.jpg">
+      <publishTime>01/26/2021 20:32:52</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>12/03/2020 12:44:02</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_flat_75_ffffff_40x100.png">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_95_fef1ec_1x400.png">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_222222_256x240.png">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_454545_256x240.png">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_888888_256x240.png">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery-ui.css">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.accordion.css">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.all.css">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.autocomplete.css">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.base.css">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.button.css">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.core.css">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.datepicker.css">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.dialog.css">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.progressbar.css">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.resizable.css">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.selectable.css">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.slider.css">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.tabs.css">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.theme.css">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_flat_75_ffffff_40x100.png">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_55_fbf9ee_1x400.png">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_95_fef1ec_1x400.png">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_222222_256x240.png">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_454545_256x240.png">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_888888_256x240.png">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery-ui.min.css">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.accordion.min.css">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.autocomplete.min.css">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.button.min.css">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.core.min.css">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.datepicker.min.css">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.dialog.min.css">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.progressbar.min.css">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.resizable.min.css">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.selectable.min.css">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.slider.min.css">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.tabs.min.css">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.theme.min.css">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="DataModel/DataModel.edmx.diagram">
+      <publishTime>03/28/2021 16:14:58</publishTime>
+    </File>
+    <File Include="DataModel/SBSDataModel.edmx.diagram">
+      <publishTime>06/23/2021 22:37:26</publishTime>
+    </File>
+    <File Include="DataModel/SBSModel.edmx.diagram">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>12/03/2020 12:44:02</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>12/03/2020 12:44:15</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.8.2.min.js">
+      <publishTime>12/03/2020 12:44:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.5.1.js">
+      <publishTime>01/16/2021 19:05:39</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.8.24.js">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.8.24.min.js">
+      <publishTime>12/03/2020 12:44:10</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.js">
+      <publishTime>12/03/2020 12:44:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.min.js">
+      <publishTime>12/03/2020 12:44:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>12/03/2020 12:44:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>12/03/2020 12:44:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>12/03/2020 12:44:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>12/03/2020 12:44:11</publishTime>
+    </File>
+    <File Include="Scripts/js/adminlte.min.js">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="Scripts/js/dashboard.js">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="Scripts/js/demo.js">
+      <publishTime>08/15/2019 15:25:55</publishTime>
+    </File>
+    <File Include="Scripts/knockout-2.2.0.debug.js">
+      <publishTime>12/03/2020 12:44:15</publishTime>
+    </File>
+    <File Include="Scripts/knockout-2.2.0.js">
+      <publishTime>12/03/2020 12:44:15</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>12/03/2020 12:44:11</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>12/03/2020 12:44:11</publishTime>
+    </File>
+    <File Include="Views/CategoryMaster/CategoryMaster.cshtml">
+      <publishTime>06/14/2021 14:09:50</publishTime>
+    </File>
+    <File Include="Views/CategoryMaster/_CategoryMaster.cshtml">
+      <publishTime>06/10/2021 19:56:25</publishTime>
+    </File>
+    <File Include="Views/Dashboard/Dashboard.cshtml">
+      <publishTime>04/18/2021 00:33:31</publishTime>
+    </File>
+    <File Include="Views/Employee/EmployeeDetail.cshtml">
+      <publishTime>04/17/2021 20:34:38</publishTime>
+    </File>
+    <File Include="Views/Employee/EmployeeMaster.cshtml">
+      <publishTime>06/07/2021 19:37:02</publishTime>
+    </File>
+    <File Include="Views/Employee/NewEmployee.cshtml">
+      <publishTime>04/17/2021 18:31:49</publishTime>
+    </File>
+    <File Include="Views/Login/Login.cshtml">
+      <publishTime>06/07/2021 20:02:25</publishTime>
+    </File>
+    <File Include="Views/Members/MemberReferralDetail.cshtml">
+      <publishTime>06/04/2021 14:08:58</publishTime>
+    </File>
+    <File Include="Views/Members/MembersDetail.cshtml">
+      <publishTime>06/04/2021 13:36:13</publishTime>
+    </File>
+    <File Include="Views/Members/NewMembers.cshtml">
+      <publishTime>04/03/2021 16:38:46</publishTime>
+    </File>
+    <File Include="Views/Members/SBSMembers.cshtml">
+      <publishTime>04/03/2021 16:38:59</publishTime>
+    </File>
+    <File Include="Views/Partial/_Footer.cshtml">
+      <publishTime>01/26/2021 21:38:35</publishTime>
+    </File>
+    <File Include="Views/Partial/_Header.cshtml">
+      <publishTime>06/04/2021 12:14:48</publishTime>
+    </File>
+    <File Include="Views/Partial/_Sidebar.cshtml">
+      <publishTime>06/14/2021 18:33:34</publishTime>
+    </File>
+    <File Include="Views/ProductMaster/AddProduct.cshtml">
+      <publishTime>06/23/2021 23:02:05</publishTime>
+    </File>
+    <File Include="Views/ProductMaster/ProductMaster.cshtml">
+      <publishTime>06/22/2021 21:51:10</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>12/03/2020 12:44:02</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>01/22/2021 16:58:39</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>12/03/2020 12:44:02</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>01/20/2021 17:57:18</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/24/2021 00:40:47</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

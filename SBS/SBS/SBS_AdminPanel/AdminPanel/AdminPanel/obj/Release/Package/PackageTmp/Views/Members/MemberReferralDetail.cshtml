@@ -1,0 +1,92 @@
+﻿@{
+    ViewBag.Title = "MemberReferralDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/bower_components/datatable/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            <i class="fa fa-users"></i>&nbsp;SBS Member Referral Detail
+        </h1>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <!-- Info boxes -->
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <table id="SBSMemberReferralDT" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>S. No.</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Mobile</th>
+                                    <th>Email</th>
+                                    <th>Gender</th>
+                                    <th>City</th>
+                                    <th>Member ID</th>
+                                    <th>Status</th>
+                                    <th>KYC Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var DL in Model)
+                                {
+                                    <tr>
+                                        <td>@DL.sNo</td>
+                                        <td>@DL.FirstName</td>
+                                        <td>@DL.LastName</td>
+                                        <td>@DL.Mobile</td>
+                                        <td>@DL.Email</td>
+                                        <td>@DL.Gender</td>
+                                        <td>@DL.City</td>
+                                        <td>@DL.SBSMemberID</td>
+                                        @if (DL.IsActive == "In-Active")
+                                        {
+                                            <td style="color:red;">@DL.IsActive</td>
+                                        }
+                                        else
+                                        {
+                                            <td style="color:green;">@DL.IsActive</td>
+                                        }
+
+                                        @if (DL.IsKYCFilled == "True")
+                                        {
+                                            <td style="color:green;">Done</td>
+                                        }
+                                        else
+                                        {
+                                            <td style="color:red;">Pending</td>
+                                        }
+
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="~/bower_components/datatable/js/jquery.dataTables.min.js"></script>
+<script src="~/bower_components/datatable/js/dataTables.bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $('#SBSMemberReferralDT').DataTable({
+            "scrollX": false,
+            "paging": false,
+            "ordering": false,
+            "info": false,
+            "searching": false
+        });
+    });
+</script>

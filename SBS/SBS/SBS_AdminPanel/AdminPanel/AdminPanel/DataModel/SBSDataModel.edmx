@@ -1,0 +1,759 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="sbsjodhpurModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CityMaster">
+          <Key>
+            <PropertyRef Name="CityID" />
+          </Key>
+          <Property Name="CityID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CityName" Type="varchar" MaxLength="50" />
+          <Property Name="StateID" Type="bigint" />
+          <Property Name="CreationDate" Type="datetime" />
+          <Property Name="ModifiyDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="CountryMaster">
+          <Key>
+            <PropertyRef Name="CountryID" />
+          </Key>
+          <Property Name="CountryID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CountryName" Type="varchar" MaxLength="50" />
+          <Property Name="CreationDate" Type="datetime" />
+          <Property Name="ModifiyDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SBS_Employee_EducationCertificates">
+          <Key>
+            <PropertyRef Name="DocID" />
+          </Key>
+          <Property Name="DocID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmployeeID" Type="bigint" />
+          <Property Name="EducationCertificates" Type="nvarchar(max)" />
+          <Property Name="CreationDate" Type="datetime" />
+          <Property Name="ModifiyDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SBS_Employee_IDProofs">
+          <Key>
+            <PropertyRef Name="DocID" />
+          </Key>
+          <Property Name="DocID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmployeeID" Type="bigint" />
+          <Property Name="IDProofs" Type="nvarchar(max)" />
+          <Property Name="CreationDate" Type="datetime" />
+          <Property Name="ModifiyDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SBS_EmployeeMaster">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mobile" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Gender" Type="int" />
+          <Property Name="DOB" Type="varchar" MaxLength="50" />
+          <Property Name="City" Type="int" />
+          <Property Name="State" Type="int" />
+          <Property Name="Country" Type="int" />
+          <Property Name="Status" Type="varchar" MaxLength="50" />
+          <Property Name="CreationDate" Type="datetime" />
+          <Property Name="ModifiyDate" Type="datetime" />
+          <Property Name="Department" Type="varchar" MaxLength="50" />
+          <Property Name="PossportPhoto" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="StateMaster">
+          <Key>
+            <PropertyRef Name="StateID" />
+          </Key>
+          <Property Name="StateID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StateName" Type="varchar" MaxLength="50" />
+          <Property Name="CountryID" Type="bigint" />
+          <Property Name="CreationDate" Type="datetime" />
+          <Property Name="ModifiyDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SBS_CategoryMaster">
+          <Key>
+            <PropertyRef Name="catID" />
+          </Key>
+          <Property Name="catID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CatName" Type="nvarchar" MaxLength="500" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreationDate" Type="datetime" />
+          <Property Name="ModifiyDate" Type="datetime" />
+          <Property Name="CatSection" Type="varchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="SBS_Login">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="LastLogin" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SBS_MemberKYCDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MemberID" Type="nvarchar" MaxLength="50" />
+          <Property Name="KYC_AadharCard" Type="nvarchar(max)" />
+          <Property Name="KYC_PanCard" Type="nvarchar(max)" />
+          <Property Name="CreationDate" Type="datetime" />
+          <Property Name="ModifiyDate" Type="datetime" />
+          <Property Name="Verified" Type="bit" />
+          <Property Name="VerifiedBy" Type="varchar" MaxLength="100" />
+          <Property Name="PassportPhoto" Type="nvarchar(max)" />
+          <Property Name="KYC_AadharCard_back" Type="nvarchar(max)" />
+          <Property Name="KYC_PanCard_back" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="SBS_ProductDetail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PID" Type="bigint" />
+          <Property Name="SubimgPath" Type="nvarchar(max)" />
+          <Property Name="CreationDate" Type="datetime" />
+          <Property Name="MoifiyDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SBS_ProductMaster">
+          <Key>
+            <PropertyRef Name="PID" />
+          </Key>
+          <Property Name="PID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PName" Type="nvarchar" MaxLength="500" />
+          <Property Name="marketRate" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="sbsRate" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="imgPath" Type="nvarchar(max)" />
+          <Property Name="catID" Type="bigint" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsAddToCart" Type="bit" />
+          <Property Name="CreationDate" Type="datetime" />
+          <Property Name="ModifiyDate" Type="datetime" />
+          <Property Name="ProductDescription" Type="nvarchar(max)" />
+          <Property Name="DocPath" Type="nvarchar(max)" />
+          <Property Name="Qty" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="QtyType" Type="varchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="SBS_RegistrationMaster">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="20" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Gender" Type="bit" />
+          <Property Name="City" Type="nvarchar" MaxLength="10" />
+          <Property Name="Country" Type="nvarchar" MaxLength="10" />
+          <Property Name="SBSMemberID" Type="nvarchar" MaxLength="50" />
+          <Property Name="SBSPassword" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreationDate" Type="datetime" />
+          <Property Name="ModifiyDate" Type="datetime" />
+          <Property Name="referralCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="referralCount" Type="int" />
+          <Property Name="referralBY" Type="bigint" />
+        </EntityType>
+        <Function Name="GenPass" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar" />
+        <Function Name="SBS_GetDashboardData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SBS">
+          <Parameter Name="Criteria" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SBS_GetEmployeeDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SBS">
+          <Parameter Name="Criteria" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SBS_GetMemberDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SBS">
+          <Parameter Name="Criteria" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SBS_GetMemberKYCDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SBS">
+          <Parameter Name="Criteria" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SBS_GetMemberReferralDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SBS">
+          <Parameter Name="Criteria" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SBS_GetProductCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SBS">
+          <Parameter Name="Criteria" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="SBS_GetProductDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SBS">
+          <Parameter Name="Criteria" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SBS_GetProducts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SBS">
+          <Parameter Name="Criteria" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="CallBy" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SBS_GetProductsDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SBS">
+          <Parameter Name="Criteria" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="SBS_saveMemberKYCDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SBS">
+          <Parameter Name="MemberID" Type="nvarchar" Mode="In" />
+          <Parameter Name="AadharCard" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="PanCard" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="PassportPhoto" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="AadharCardBack" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="PanCardBack" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="SBS_Verifiy_KYC_Documents" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SBS">
+          <Parameter Name="MemberID" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_MemberRegistration" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SBS">
+          <Parameter Name="FirstName" Type="nvarchar" Mode="In" />
+          <Parameter Name="LastName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Mobile" Type="nvarchar" Mode="In" />
+          <Parameter Name="Email" Type="nvarchar" Mode="In" />
+          <Parameter Name="Gender" Type="bit" Mode="In" />
+          <Parameter Name="City" Type="nvarchar" Mode="In" />
+          <Parameter Name="Country" Type="nvarchar" Mode="In" />
+          <Parameter Name="MemberReferralCode" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_RandomPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SBS">
+          <Parameter Name="pass_len" Type="int" Mode="In" />
+          <Parameter Name="password" Type="nvarchar" Mode="InOut" />
+        </Function>
+        <EntityContainer Name="sbsjodhpurModelStoreContainer">
+          <EntitySet Name="CityMaster" EntityType="Self.CityMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CountryMaster" EntityType="Self.CountryMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SBS_Employee_EducationCertificates" EntityType="Self.SBS_Employee_EducationCertificates" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SBS_Employee_IDProofs" EntityType="Self.SBS_Employee_IDProofs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SBS_EmployeeMaster" EntityType="Self.SBS_EmployeeMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StateMaster" EntityType="Self.StateMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SBS_CategoryMaster" EntityType="Self.SBS_CategoryMaster" Schema="SBS" store:Type="Tables" />
+          <EntitySet Name="SBS_Login" EntityType="Self.SBS_Login" Schema="SBS" store:Type="Tables" />
+          <EntitySet Name="SBS_MemberKYCDetails" EntityType="Self.SBS_MemberKYCDetails" Schema="SBS" store:Type="Tables" />
+          <EntitySet Name="SBS_ProductDetail" EntityType="Self.SBS_ProductDetail" Schema="SBS" store:Type="Tables" />
+          <EntitySet Name="SBS_ProductMaster" EntityType="Self.SBS_ProductMaster" Schema="SBS" store:Type="Tables" />
+          <EntitySet Name="SBS_RegistrationMaster" EntityType="Self.SBS_RegistrationMaster" Schema="SBS" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="sbsjodhpurModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CityMaster">
+          <Key>
+            <PropertyRef Name="CityID" />
+          </Key>
+          <Property Name="CityID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CityName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StateID" Type="Int64" />
+          <Property Name="CreationDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiyDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="CountryMaster">
+          <Key>
+            <PropertyRef Name="CountryID" />
+          </Key>
+          <Property Name="CountryID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CountryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreationDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiyDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="SBS_Employee_EducationCertificates">
+          <Key>
+            <PropertyRef Name="DocID" />
+          </Key>
+          <Property Name="DocID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeID" Type="Int64" />
+          <Property Name="EducationCertificates" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreationDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiyDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="SBS_Employee_IDProofs">
+          <Key>
+            <PropertyRef Name="DocID" />
+          </Key>
+          <Property Name="DocID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeID" Type="Int64" />
+          <Property Name="IDProofs" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreationDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiyDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="SBS_EmployeeMaster">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Gender" Type="Int32" />
+          <Property Name="DOB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="Int32" />
+          <Property Name="State" Type="Int32" />
+          <Property Name="Country" Type="Int32" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreationDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiyDate" Type="DateTime" Precision="3" />
+          <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PossportPhoto" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="StateMaster">
+          <Key>
+            <PropertyRef Name="StateID" />
+          </Key>
+          <Property Name="StateID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StateName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CountryID" Type="Int64" />
+          <Property Name="CreationDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiyDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="SBS_CategoryMaster">
+          <Key>
+            <PropertyRef Name="catID" />
+          </Key>
+          <Property Name="catID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CatName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreationDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiyDate" Type="DateTime" Precision="3" />
+          <Property Name="CatSection" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SBS_Login">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="LastLogin" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="SBS_MemberKYCDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MemberID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KYC_AadharCard" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KYC_PanCard" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreationDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiyDate" Type="DateTime" Precision="3" />
+          <Property Name="Verified" Type="Boolean" />
+          <Property Name="VerifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PassportPhoto" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KYC_AadharCard_back" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KYC_PanCard_back" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SBS_ProductDetail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PID" Type="Int64" />
+          <Property Name="SubimgPath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreationDate" Type="DateTime" Precision="3" />
+          <Property Name="MoifiyDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="SBS_ProductMaster">
+          <Key>
+            <PropertyRef Name="PID" />
+          </Key>
+          <Property Name="PID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="marketRate" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="sbsRate" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="imgPath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="catID" Type="Int64" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsAddToCart" Type="Boolean" />
+          <Property Name="CreationDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiyDate" Type="DateTime" Precision="3" />
+          <Property Name="ProductDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DocPath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Qty" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="QtyType" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SBS_RegistrationMaster">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="Boolean" />
+          <Property Name="City" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="SBSMemberID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SBSPassword" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreationDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiyDate" Type="DateTime" Precision="3" />
+          <Property Name="referralCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="referralCount" Type="Int32" />
+          <Property Name="referralBY" Type="Int64" />
+        </EntityType>
+        <EntityContainer Name="sbsjodhpurEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CityMasters" EntityType="Self.CityMaster" />
+          <EntitySet Name="CountryMasters" EntityType="Self.CountryMaster" />
+          <EntitySet Name="SBS_Employee_EducationCertificates" EntityType="Self.SBS_Employee_EducationCertificates" />
+          <EntitySet Name="SBS_Employee_IDProofs" EntityType="Self.SBS_Employee_IDProofs" />
+          <EntitySet Name="SBS_EmployeeMaster" EntityType="Self.SBS_EmployeeMaster" />
+          <EntitySet Name="StateMasters" EntityType="Self.StateMaster" />
+          <EntitySet Name="SBS_CategoryMaster" EntityType="Self.SBS_CategoryMaster" />
+          <EntitySet Name="SBS_Login" EntityType="Self.SBS_Login" />
+          <EntitySet Name="SBS_MemberKYCDetails" EntityType="Self.SBS_MemberKYCDetails" />
+          <EntitySet Name="SBS_ProductDetail" EntityType="Self.SBS_ProductDetail" />
+          <EntitySet Name="SBS_ProductMaster" EntityType="Self.SBS_ProductMaster" />
+          <EntitySet Name="SBS_RegistrationMaster" EntityType="Self.SBS_RegistrationMaster" />
+          <FunctionImport Name="SBS_GetDashboardData">
+            <Parameter Name="Criteria" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SBS_GetEmployeeDetails">
+            <Parameter Name="Criteria" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SBS_GetMemberDetails">
+            <Parameter Name="Criteria" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SBS_GetMemberKYCDetail" ReturnType="Collection(sbsjodhpurModel.SBS_GetMemberKYCDetail_Result)">
+            <Parameter Name="Criteria" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SBS_GetMemberReferralDetails">
+            <Parameter Name="Criteria" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SBS_GetProductCategory">
+            <Parameter Name="Criteria" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SBS_GetProductDetails" ReturnType="Collection(sbsjodhpurModel.SBS_GetProductDetails_Result)">
+            <Parameter Name="Criteria" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SBS_GetProducts">
+            <Parameter Name="Criteria" Mode="In" Type="String" />
+            <Parameter Name="CallBy" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SBS_GetProductsDetails">
+            <Parameter Name="Criteria" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SBS_saveMemberKYCDetails" ReturnType="Collection(String)">
+            <Parameter Name="MemberID" Mode="In" Type="String" />
+            <Parameter Name="AadharCard" Mode="In" Type="String" />
+            <Parameter Name="PanCard" Mode="In" Type="String" />
+            <Parameter Name="PassportPhoto" Mode="In" Type="String" />
+            <Parameter Name="AadharCardBack" Mode="In" Type="String" />
+            <Parameter Name="PanCardBack" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SBS_Verifiy_KYC_Documents" ReturnType="Collection(sbsjodhpurModel.SBS_Verifiy_KYC_Documents_Result)">
+            <Parameter Name="MemberID" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_MemberRegistration" ReturnType="Collection(String)">
+            <Parameter Name="FirstName" Mode="In" Type="String" />
+            <Parameter Name="LastName" Mode="In" Type="String" />
+            <Parameter Name="Mobile" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="Gender" Mode="In" Type="Boolean" />
+            <Parameter Name="City" Mode="In" Type="String" />
+            <Parameter Name="Country" Mode="In" Type="String" />
+            <Parameter Name="MemberReferralCode" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_RandomPassword">
+            <Parameter Name="pass_len" Mode="In" Type="Int32" />
+            <Parameter Name="password" Mode="InOut" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="SBS_GetMemberKYCDetail_Result">
+          <Property Type="String" Name="FirstName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="LastName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Mobile" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+          <Property Type="Boolean" Name="Gender" Nullable="true" />
+          <Property Type="String" Name="City" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Country" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="SBSMemberID" Nullable="true" MaxLength="50" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SBS_GetProductDetails_Result">
+          <Property Type="Int64" Name="sNo" Nullable="true" />
+          <Property Type="Int64" Name="catID" Nullable="true" />
+          <Property Type="String" Name="catName" Nullable="true" MaxLength="500" />
+          <Property Type="Int64" Name="PID" Nullable="false" />
+          <Property Type="String" Name="PName" Nullable="true" MaxLength="500" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+          <Property Type="Boolean" Name="IsAddToCart" Nullable="true" />
+          <Property Type="DateTime" Name="CreationDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ModifiyDate" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="SBS_Verifiy_KYC_Documents_Result">
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="String" Name="FirstName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="LastName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Mobile" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+          <Property Type="Boolean" Name="Gender" Nullable="true" />
+          <Property Type="String" Name="City" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Country" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="SBSMemberID" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="SBSPassword" Nullable="true" MaxLength="10" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+          <Property Type="DateTime" Name="CreationDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ModifiyDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="referralCode" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="referralCount" Nullable="true" />
+          <Property Type="Int64" Name="referralBY" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="sbsjodhpurModelStoreContainer" CdmEntityContainer="sbsjodhpurEntities">
+          <EntitySetMapping Name="CityMasters">
+            <EntityTypeMapping TypeName="sbsjodhpurModel.CityMaster">
+              <MappingFragment StoreEntitySet="CityMaster">
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="CityName" ColumnName="CityName" />
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="ModifiyDate" ColumnName="ModifiyDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CountryMasters">
+            <EntityTypeMapping TypeName="sbsjodhpurModel.CountryMaster">
+              <MappingFragment StoreEntitySet="CountryMaster">
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="ModifiyDate" ColumnName="ModifiyDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SBS_Employee_EducationCertificates">
+            <EntityTypeMapping TypeName="sbsjodhpurModel.SBS_Employee_EducationCertificates">
+              <MappingFragment StoreEntitySet="SBS_Employee_EducationCertificates">
+                <ScalarProperty Name="DocID" ColumnName="DocID" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="EducationCertificates" ColumnName="EducationCertificates" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="ModifiyDate" ColumnName="ModifiyDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SBS_Employee_IDProofs">
+            <EntityTypeMapping TypeName="sbsjodhpurModel.SBS_Employee_IDProofs">
+              <MappingFragment StoreEntitySet="SBS_Employee_IDProofs">
+                <ScalarProperty Name="DocID" ColumnName="DocID" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="IDProofs" ColumnName="IDProofs" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="ModifiyDate" ColumnName="ModifiyDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SBS_EmployeeMaster">
+            <EntityTypeMapping TypeName="sbsjodhpurModel.SBS_EmployeeMaster">
+              <MappingFragment StoreEntitySet="SBS_EmployeeMaster">
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="ModifiyDate" ColumnName="ModifiyDate" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="PossportPhoto" ColumnName="PossportPhoto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StateMasters">
+            <EntityTypeMapping TypeName="sbsjodhpurModel.StateMaster">
+              <MappingFragment StoreEntitySet="StateMaster">
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="StateName" ColumnName="StateName" />
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="ModifiyDate" ColumnName="ModifiyDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SBS_CategoryMaster">
+            <EntityTypeMapping TypeName="sbsjodhpurModel.SBS_CategoryMaster">
+              <MappingFragment StoreEntitySet="SBS_CategoryMaster">
+                <ScalarProperty Name="catID" ColumnName="catID" />
+                <ScalarProperty Name="CatName" ColumnName="CatName" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="ModifiyDate" ColumnName="ModifiyDate" />
+                <ScalarProperty Name="CatSection" ColumnName="CatSection" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SBS_Login">
+            <EntityTypeMapping TypeName="sbsjodhpurModel.SBS_Login">
+              <MappingFragment StoreEntitySet="SBS_Login">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SBS_MemberKYCDetails">
+            <EntityTypeMapping TypeName="sbsjodhpurModel.SBS_MemberKYCDetails">
+              <MappingFragment StoreEntitySet="SBS_MemberKYCDetails">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+                <ScalarProperty Name="KYC_AadharCard" ColumnName="KYC_AadharCard" />
+                <ScalarProperty Name="KYC_PanCard" ColumnName="KYC_PanCard" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="ModifiyDate" ColumnName="ModifiyDate" />
+                <ScalarProperty Name="Verified" ColumnName="Verified" />
+                <ScalarProperty Name="VerifiedBy" ColumnName="VerifiedBy" />
+                <ScalarProperty Name="PassportPhoto" ColumnName="PassportPhoto" />
+                <ScalarProperty Name="KYC_AadharCard_back" ColumnName="KYC_AadharCard_back" />
+                <ScalarProperty Name="KYC_PanCard_back" ColumnName="KYC_PanCard_back" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SBS_ProductDetail">
+            <EntityTypeMapping TypeName="sbsjodhpurModel.SBS_ProductDetail">
+              <MappingFragment StoreEntitySet="SBS_ProductDetail">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PID" ColumnName="PID" />
+                <ScalarProperty Name="SubimgPath" ColumnName="SubimgPath" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="MoifiyDate" ColumnName="MoifiyDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SBS_ProductMaster">
+            <EntityTypeMapping TypeName="sbsjodhpurModel.SBS_ProductMaster">
+              <MappingFragment StoreEntitySet="SBS_ProductMaster">
+                <ScalarProperty Name="PID" ColumnName="PID" />
+                <ScalarProperty Name="PName" ColumnName="PName" />
+                <ScalarProperty Name="marketRate" ColumnName="marketRate" />
+                <ScalarProperty Name="sbsRate" ColumnName="sbsRate" />
+                <ScalarProperty Name="imgPath" ColumnName="imgPath" />
+                <ScalarProperty Name="catID" ColumnName="catID" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsAddToCart" ColumnName="IsAddToCart" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="ModifiyDate" ColumnName="ModifiyDate" />
+                <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
+                <ScalarProperty Name="DocPath" ColumnName="DocPath" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="QtyType" ColumnName="QtyType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SBS_RegistrationMaster">
+            <EntityTypeMapping TypeName="sbsjodhpurModel.SBS_RegistrationMaster">
+              <MappingFragment StoreEntitySet="SBS_RegistrationMaster">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="SBSMemberID" ColumnName="SBSMemberID" />
+                <ScalarProperty Name="SBSPassword" ColumnName="SBSPassword" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="ModifiyDate" ColumnName="ModifiyDate" />
+                <ScalarProperty Name="referralCode" ColumnName="referralCode" />
+                <ScalarProperty Name="referralCount" ColumnName="referralCount" />
+                <ScalarProperty Name="referralBY" ColumnName="referralBY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="SBS_GetDashboardData" FunctionName="sbsjodhpurModel.Store.SBS_GetDashboardData" />
+          <FunctionImportMapping FunctionImportName="SBS_GetEmployeeDetails" FunctionName="sbsjodhpurModel.Store.SBS_GetEmployeeDetails" />
+          <FunctionImportMapping FunctionImportName="SBS_GetMemberDetails" FunctionName="sbsjodhpurModel.Store.SBS_GetMemberDetails" />
+          <FunctionImportMapping FunctionImportName="SBS_GetMemberKYCDetail" FunctionName="sbsjodhpurModel.Store.SBS_GetMemberKYCDetail">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="sbsjodhpurModel.SBS_GetMemberKYCDetail_Result">
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="SBSMemberID" ColumnName="SBSMemberID" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SBS_GetMemberReferralDetails" FunctionName="sbsjodhpurModel.Store.SBS_GetMemberReferralDetails" />
+          <FunctionImportMapping FunctionImportName="SBS_GetProductCategory" FunctionName="sbsjodhpurModel.Store.SBS_GetProductCategory" />
+          <FunctionImportMapping FunctionImportName="SBS_GetProductDetails" FunctionName="sbsjodhpurModel.Store.SBS_GetProductDetails">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="sbsjodhpurModel.SBS_GetProductDetails_Result">
+                <ScalarProperty Name="sNo" ColumnName="sNo" />
+                <ScalarProperty Name="catID" ColumnName="catID" />
+                <ScalarProperty Name="catName" ColumnName="catName" />
+                <ScalarProperty Name="PID" ColumnName="PID" />
+                <ScalarProperty Name="PName" ColumnName="PName" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsAddToCart" ColumnName="IsAddToCart" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="ModifiyDate" ColumnName="ModifiyDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SBS_GetProducts" FunctionName="sbsjodhpurModel.Store.SBS_GetProducts" />
+          <FunctionImportMapping FunctionImportName="SBS_GetProductsDetails" FunctionName="sbsjodhpurModel.Store.SBS_GetProductsDetails" />
+          <FunctionImportMapping FunctionImportName="SBS_saveMemberKYCDetails" FunctionName="sbsjodhpurModel.Store.SBS_saveMemberKYCDetails" />
+          <FunctionImportMapping FunctionImportName="SBS_Verifiy_KYC_Documents" FunctionName="sbsjodhpurModel.Store.SBS_Verifiy_KYC_Documents">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="sbsjodhpurModel.SBS_Verifiy_KYC_Documents_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="SBSMemberID" ColumnName="SBSMemberID" />
+                <ScalarProperty Name="SBSPassword" ColumnName="SBSPassword" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="ModifiyDate" ColumnName="ModifiyDate" />
+                <ScalarProperty Name="referralCode" ColumnName="referralCode" />
+                <ScalarProperty Name="referralCount" ColumnName="referralCount" />
+                <ScalarProperty Name="referralBY" ColumnName="referralBY" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_MemberRegistration" FunctionName="sbsjodhpurModel.Store.sp_MemberRegistration" />
+          <FunctionImportMapping FunctionImportName="usp_RandomPassword" FunctionName="sbsjodhpurModel.Store.usp_RandomPassword" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

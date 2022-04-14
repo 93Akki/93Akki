@@ -1,0 +1,220 @@
+﻿@model AdminPanel.Models.Member
+@{
+    ViewBag.Title = "MembersDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            <i class="fa fa-users"></i>&nbsp;Member Detail
+        </h1>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <!-- Info boxes -->
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="nav-tabs-custom">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#activity" data-toggle="tab">Personal Detail</a></li>
+                        <li><a href="#timeline" data-toggle="tab">KYC Document</a></li>
+                        @if (Model.Verified == true)
+                        {
+                            <li><a href="#ReferralMessage" data-toggle="tab">Referral Message</a></li>
+                        }
+                    </ul>
+                    <div class="tab-content">
+
+                        <div class="active tab-pane" id="activity">
+
+                            @using (Html.BeginForm("UpdateMembersDetail", "Members", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal" }))
+                            {
+                                <div class="form-group">
+                                    <div class="col-sm-6">
+                                        <label for="inputName" class="col-sm-4 control-label">First Name</label>
+                                        <div class="col-sm-8">
+                                            @Html.HiddenFor(model => model.ID, new { Value = Model.ID })
+                                            @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control", disabled = "disabled", @Value = Model.FirstName })
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="inputName" class="col-sm-4 control-label">Last Name</label>
+                                        <div class="col-sm-8">
+                                            @Html.TextBoxFor(model => model.LastName, new { @class = "form-control", disabled = "disabled", @Value = Model.LastName })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-6">
+                                        <label for="inputName" class="col-sm-4 control-label">Mobile</label>
+                                        <div class="col-sm-8">
+                                            @Html.TextBoxFor(model => model.Mobile, new { @class = "form-control", disabled = "disabled", @Value = Model.Mobile })
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="inputName" class="col-sm-4 control-label">Email</label>
+                                        <div class="col-sm-8">
+                                            @Html.TextBoxFor(model => model.Email, new { @class = "form-control", disabled = "disabled", @Value = Model.Email })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-6">
+                                        <label for="inputName" class="col-sm-4 control-label">Gender</label>
+                                        <div class="col-sm-8">
+                                            @Html.TextBoxFor(model => model.Gender, new { @class = "form-control", disabled = "disabled", @Value = Model.Gender })
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="inputName" class="col-sm-4 control-label">City</label>
+                                        <div class="col-sm-8">
+                                            @Html.TextBoxFor(model => model.City, new { @class = "form-control", disabled = "disabled", @Value = Model.City })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-6">
+                                        <label for="inputName" class="col-sm-4 control-label">Country</label>
+                                        <div class="col-sm-8">
+                                            @Html.TextBoxFor(model => model.Country, new { @class = "form-control", disabled = "disabled", @Value = Model.Country })
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="inputName" class="col-sm-4 control-label">Member ID</label>
+                                        <div class="col-sm-8">
+                                            @Html.TextBoxFor(model => model.SBSMemberID, new { @class = "form-control", disabled = "disabled", @Value = Model.SBSMemberID })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-6">
+                                        <label for="inputName" class="col-sm-4 control-label">Password</label>
+                                        <div class="col-sm-8">
+                                            @Html.TextBoxFor(model => model.SBSPassword, new { @class = "form-control", disabled = "disabled", @Value = Model.SBSPassword })
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="inputName" class="col-sm-4 control-label">Status</label>
+                                        <div class="col-sm-8">
+                                            @Html.TextBoxFor(model => model.IsActive, new { @class = "form-control", disabled = "disabled", @Value = Model.IsActive })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-6">
+                                        <label for="inputName" class="col-sm-4 control-label">Referral Code</label>
+                                        <div class="col-sm-8">
+                                            @Html.TextBoxFor(model => model.referralCode, new { @class = "form-control", disabled = "disabled", @Value = Model.referralCode })
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="inputName" class="col-sm-4 control-label">Referral Count</label>
+                                        <div class="col-sm-6">
+                                            @Html.TextBoxFor(model => model.referralCount, new { @class = "form-control", disabled = "disabled", @Value = Model.referralCount })
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <a href="@Url.Action("MemberReferralDetail", "Members", new RouteValueDictionary(new { id = Model.ID}))" target="_blank">View Referral</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-6">
+                                        <label for="inputName" class="col-sm-4 control-label">Creation Date</label>
+                                        <div class="col-sm-8">
+                                            @Html.TextBoxFor(model => model.CreationDate, new { @class = "form-control", disabled = "disabled", @Value = Model.CreationDate })
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="inputName" class="col-sm-4 control-label">Modifiy Date</label>
+                                        <div class="col-sm-8">
+                                            @Html.TextBoxFor(model => model.ModifiyDate, new { @class = "form-control", disabled = "disabled", @Value = Model.ModifiyDate })
+                                        </div>
+                                    </div>
+                                </div>
+
+                            }
+
+                        </div>
+                        <!-- /.tab-pane -->
+                        <div class="tab-pane" id="timeline">
+                            <form class="form-horizontal">
+                                <ul class="timeline timeline-inverse">
+                                    <!-- /.timeline-label -->
+                                    <!-- timeline item -->
+                                    <li>
+                                        <i class="fa fa-camera bg-purple"></i>
+                                        <div class="timeline-item">
+                                            <h3 class="timeline-header"><b>Passport Size photo</b></h3>
+                                            <div class="timeline-body">
+                                                <img src="@Model.PassportPhoto.ToString().Replace("~/","http://sbsjodhpur.com/")" style="width: 200px;" alt="..." class="margin">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- END timeline item -->
+                                </ul>
+
+                                <!-- The timeline -->
+                                <ul class="timeline timeline-inverse">
+                                    <!-- /.timeline-label -->
+                                    <!-- timeline item -->
+                                    <li>
+                                        <i class="fa fa-file-text-o bg-purple"></i>
+                                        <div class="timeline-item">
+                                            <h3 class="timeline-header"><b>Pan Card</b></h3>
+                                            <div class="timeline-body">
+                                                <img src="@Model.KYC_PanCard.ToString().Replace("~/","http://sbsjodhpur.com/")" style="width: 420px;" alt="..." class="margin">
+                                                <img src="@Model.KYC_PanCard_back.ToString().Replace("~/","http://sbsjodhpur.com/")" style="width: 420px;" alt="..." class="margin">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- END timeline item -->
+                                </ul>
+
+                                <ul class="timeline timeline-inverse">
+                                    <!-- /.timeline-label -->
+                                    <!-- timeline item -->
+                                    <li>
+                                        <i class="fa fa-file-text-o bg-purple"></i>
+                                        <div class="timeline-item">
+                                            <h3 class="timeline-header"><b>Adhar Card/Voter ID Card/Driving Licence</b></h3>
+                                            <div class="timeline-body">
+                                                <img src="@Model.KYC_AadharCard.ToString().Replace("~/","http://sbsjodhpur.com/")" style="width: 420px;" alt="..." class="margin">
+                                                <img src="@Model.KYC_AadharCard_back.ToString().Replace("~/","http://sbsjodhpur.com/")" style="width: 420px;" alt="..." class="margin">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- END timeline item -->
+                                </ul>
+                                @if (Model.Verified == false)
+                                {
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-1 col-sm-10">
+                                            <a href="@Url.Action("UpdateMembersDetail", "Members", new RouteValueDictionary(new { id = @Model.KYC_MemberID }))" class="btn btn-primary"><i class="fa fa-file-text-o"></i>&nbsp;Verifiy Documents</a>
+                                        </div>
+                                    </div>
+                                }
+                            </form>
+                        </div>
+                        <!-- /.tab-pane -->
+                        @if (Model.Verified == true)
+                        {
+                            <div class="tab-pane" id="ReferralMessage">
+                                <div class="form-group">
+                                    <label for="refMessage">Copy and forward this message using your WhatsApp</label>
+                                    <textarea class="form-control" id="refMessage" rows="4">
+                                        Hi, Use my referral code @Model.referralCode and get up to 25% off on every purchase through SBS. For more details and offers visit SBS website : http://sbsjodhpur.com/
+                                    </textarea>
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                    <!-- /.tab-content -->
+                </div>
+                <!-- /.nav-tabs-custom -->
+            </div>
+        </div>
+    </section>
+</div>

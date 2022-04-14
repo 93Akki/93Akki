@@ -1,0 +1,75 @@
+﻿@model AdminPanel.Models.Login
+@{
+    ViewBag.Title = "Login";
+}
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SBS Admin Panel | Log in</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link href="~/bower_components/Ionicons/css/ionicons.min.css" rel="stylesheet" />
+    <link href="~/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/css/AdminLTE.min.css" rel="stylesheet" />
+</head>
+<body class="hold-transition login-page">
+    @using (Html.BeginForm("SBSLogin", "Login", FormMethod.Post))
+    {
+        <div class="login-box">
+            <div class="login-logo">
+                <a href="javascript:void(0);"><b>SBS</b><br />Admin Panel</a>
+            </div>
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+            @if (@ViewBag.Message != null)
+            {
+                <div style="border: 1px solid red">
+                    @ViewBag.Message
+                </div>
+            }
+            <!-- /.login-logo -->
+            <div class="login-box-body">
+                <p class="login-box-msg">Sign in to start your session</p>
+                <div class="form-group has-feedback">
+                    @Html.TextBoxFor(a => a.UserName, new { @class = "form-control", @placeholder = "User Name", @required = "required" })
+                    @Html.ValidationMessageFor(a => a.UserName)
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    @Html.PasswordFor(a => a.Password, new { @class = "form-control", @placeholder = "Password", @required = "required" })
+                    @Html.ValidationMessageFor(a => a.Password)
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+                <div class="row">
+                    <div class="col-xs-8" style="padding-left: 18px;">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Remember Me
+                            </label>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-xs-4">
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.social-auth-links -->
+                <a href="#">I forgot my password</a><br>
+                <a href="register.html" class="text-center">Register a new membership</a>
+            </div>
+            <!-- /.login-box-body -->
+        </div>
+    }
+    @Scripts.Render("~/bundles/jquery")
+    <script src="~/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

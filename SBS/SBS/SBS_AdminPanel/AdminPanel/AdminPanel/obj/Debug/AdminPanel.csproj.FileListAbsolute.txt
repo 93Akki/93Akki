@@ -1,0 +1,96 @@
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\AdminPanel.dll.config
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\AdminPanel.dll
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\AdminPanel.pdb
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\Antlr3.Runtime.dll
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\EntityFramework.dll
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\Microsoft.Web.Infrastructure.dll
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\Newtonsoft.Json.dll
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Net.Http.Formatting.dll
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Http.dll
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Http.WebHost.dll
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Mvc.dll
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Optimization.dll
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Providers.dll
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Razor.dll
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.WebPages.Deployment.dll
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.WebPages.dll
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.WebPages.Razor.dll
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\WebGrease.dll
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\EntityFramework.xml
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\Newtonsoft.Json.xml
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Net.Http.Formatting.xml
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Http.xml
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Http.WebHost.xml
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Mvc.xml
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Razor.xml
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.WebPages.xml
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.WebPages.Deployment.xml
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.WebPages.Razor.xml
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\obj\Debug\AdminPanel.dll
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\obj\Debug\AdminPanel.pdb
+D:\Akshay\New folder\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\obj\Debug\AdminPanel.csprojResolveAssemblyReference.cache
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\AdminPanel.dll.config
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\AdminPanel.dll
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\AdminPanel.pdb
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\Antlr3.Runtime.dll
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\EntityFramework.dll
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\Microsoft.Web.Infrastructure.dll
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\Newtonsoft.Json.dll
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Net.Http.Formatting.dll
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Http.dll
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Http.WebHost.dll
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Mvc.dll
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Optimization.dll
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Providers.dll
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Razor.dll
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.WebPages.Deployment.dll
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.WebPages.dll
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.WebPages.Razor.dll
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\WebGrease.dll
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\EntityFramework.xml
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\Newtonsoft.Json.xml
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Net.Http.Formatting.xml
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Http.xml
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Http.WebHost.xml
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Mvc.xml
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Razor.xml
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.WebPages.xml
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.WebPages.Deployment.xml
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.WebPages.Razor.xml
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\obj\Debug\AdminPanel.csprojResolveAssemblyReference.cache
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\obj\Debug\AdminPanel.dll
+D:\Akshay\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\obj\Debug\AdminPanel.pdb
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\AdminPanel.dll.config
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\AdminPanel.dll
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\AdminPanel.pdb
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\Antlr3.Runtime.dll
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\EntityFramework.dll
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\Microsoft.Web.Infrastructure.dll
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\Newtonsoft.Json.dll
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Net.Http.Formatting.dll
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Http.dll
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Http.WebHost.dll
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Mvc.dll
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Optimization.dll
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Providers.dll
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Razor.dll
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.WebPages.Deployment.dll
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.WebPages.dll
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.WebPages.Razor.dll
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\WebGrease.dll
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\EntityFramework.xml
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\Newtonsoft.Json.xml
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Net.Http.Formatting.xml
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Http.xml
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Http.WebHost.xml
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Mvc.xml
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.Razor.xml
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.WebPages.xml
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.WebPages.Deployment.xml
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\bin\System.Web.WebPages.Razor.xml
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\obj\Debug\AdminPanel.csprojResolveAssemblyReference.cache
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\obj\Debug\AdminPanel.dll
+E:\Akshay Joshi - 938623\MyData\SBS\SBS\SBS_AdminPanel\AdminPanel\AdminPanel\obj\Debug\AdminPanel.pdb
