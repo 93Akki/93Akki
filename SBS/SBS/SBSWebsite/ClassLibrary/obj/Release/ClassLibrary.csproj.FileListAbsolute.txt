@@ -1,5 +1,0 @@
-E:\SBS\MvcApplication1\ClassLibrary\bin\Release\ClassLibrary.dll
-E:\SBS\MvcApplication1\ClassLibrary\bin\Release\ClassLibrary.pdb
-E:\SBS\MvcApplication1\ClassLibrary\obj\Release\ClassLibrary.csprojResolveAssemblyReference.cache
-E:\SBS\MvcApplication1\ClassLibrary\obj\Release\ClassLibrary.dll
-E:\SBS\MvcApplication1\ClassLibrary\obj\Release\ClassLibrary.pdb
